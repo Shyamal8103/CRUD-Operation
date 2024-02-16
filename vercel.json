@@ -15,7 +15,7 @@
         "dest": "index.js"
       },
       {
-        "src": "/products/(.*)",
+        "src": "/product/(.*)",
         "dest": "index.js"
       },
       {
