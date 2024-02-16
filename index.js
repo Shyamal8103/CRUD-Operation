@@ -27,7 +27,7 @@ app.patch('/product/:id',productsController.UpdateProduct)
 app.delete('/product/:id',productsController.DeleteProduct)
 
 app.listen(process.env.PORT,()=>{
-    console.log(`app is listen in port ${process.env.port}`)
+    console.log(`app is listen in port ${process.env.PORT}`)
 })
 
 // console.log('hello')
