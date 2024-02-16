@@ -10,10 +10,14 @@ app.use(express.static('build'))
 main().catch(err=>console.log(err))
 
 async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/ecommerce')
+    const username = encodeURIComponent('shivakumarsk5308')
+    const password = encodeURIComponent('Shyamal@7155');
+    await mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.hwkswaj.mongodb.net/ecommerceDatabase?retryWrites=true&w=majority`)
     console.log('Server started')
 }
 
+//  
+// 'mongodb+srv://shivakumarsk5308:<password>@cluster0.hwkswaj.mongodb.net/?retryWrites=true&w=majority'
 
 app.get('/products',productsController.getAllProducts)
 app.get('/product/:id',productsController.getProduct)
