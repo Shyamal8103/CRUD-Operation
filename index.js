@@ -11,6 +11,7 @@ main().catch(err=>console.log(err))
 
 async function main(){
     const username = encodeURIComponent('shivakumarsk5308@gmail.com')
+    
     const password = encodeURIComponent('Shyamal@7155');
     await mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.hwkswaj.mongodb.net/ecommerceDatabase?retryWrites=true&w=majority`)
 
